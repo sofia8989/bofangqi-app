@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html body {
+        --mc-header-height: 60px;
+        --van-back-top-background: #AC63FF;
+    }
+}   

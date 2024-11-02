@@ -1,0 +1,1 @@
+export const videoCoverMap = new Map

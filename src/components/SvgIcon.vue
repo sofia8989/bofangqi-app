@@ -1,0 +1,33 @@
+<template>
+  <svg aria-hidden="true" class="svg-icon" :width="props.width" :height="props.height">
+    <use :xlink:href="symbolId" :fill="props.color" :color="props.color" />
+  </svg>
+</template>
+
+<script setup name="SvgIcon">
+import { computed } from 'vue'
+const props = defineProps({
+  prefix: {
+    type: String,
+    default: 'icon'
+  },
+  name: {
+    type: String,
+    required: true
+  },
+  color: {
+    type: String,
+    default: '#333'
+  },
+  width: {
+    type: String,
+    default: '1em'
+  },
+  height: {
+    type: String,
+    default: '1em'
+  }
+})
+
+const symbolId = computed(() => `#${props.prefix}-${props.name}`)
+</script>
